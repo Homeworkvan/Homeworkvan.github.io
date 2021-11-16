@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html lang="en"> <!--<![endif]-->
+	
+<!-- Mirrored from www.tutorhelpdesk.com/blog/?page=3 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Nov 2021 07:57:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<title>Tutorhelpdesk Blog</title>		
+        <meta name="description" content="Tutorhelpdesk blog posts, news, homework help, assignment help and much more.">
+		<meta name="keywords" content="blog tutorhelpdesk, blogposts, news" />		
+		<meta name="author" content="tutorhelpdesk.com">
+        <link rel="canonical" href="https://www.tutorhelpdesk.com/blog/" />
+        <meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Tutorhelpdesk Blog" />
+<meta property="og:description" content="Tutorhelpdesk blog posts, news, homework help, assignment help and much more." />
+<meta property="og:url" content="https://www.tutorhelpdesk.com/blog/" />
+<meta property="og:site_name" content="tutorhelpdesk.com" />
+	<meta name="robots" content="index,follow" />
+	<meta name="revisit-after" content="7 days" />
+	<meta name="classification" content="Education" />
+	<meta http-equiv="distribution" content="Global" />
+    <link rel="shortcut icon" href="https://www.tutorhelpdesk.com/img/favicon.ico" />
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Libs CSS -->
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/vendor/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/vendor/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/vendor/owl-carousel/owl.carousel.css" media="screen">
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/vendor/owl-carousel/owl.theme.css" media="screen">
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/vendor/magnific-popup/magnific-popup.css" media="screen">
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/vendor/isotope/jquery.isotope.css" media="screen">
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/vendor/mediaelement/mediaelementplayer.css" media="screen">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/css/theme.css">
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/css/theme-elements.css">
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/css/theme-blog.css">
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/css/theme-shop.css">
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/css/theme-animate.css">
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/vendor/rs-plugin/css/settings.css" media="screen">
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/vendor/circle-flip-slideshow/css/component.css" media="screen">
+
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/css/theme-responsive.css" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/css/skins/default.css">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="https://www.tutorhelpdesk.com/css/custom.css">
+<link rel="stylesheet" href="https://www.tutorhelpdesk.com/css/customsidebar.css">
+
+		<!-- Head Libs -->
+		<script src="https://www.tutorhelpdesk.com/vendor/modernizr.js"></script>
+
+		<!--[if IE]>
+			<link rel="stylesheet" href="css/ie.css">
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+			<script src="vendor/respond.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+		<div class="body">
+			
+  
+         
+<script src="https://www.tutorhelpdesk.com/vendor/jquery.js"></script>
+<script src="https://www.tutorhelpdesk.com/js/upload.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+<script src="https://www.tutorhelpdesk.com/js/country.js"></script>
+<script>
+jQuery(document).ready(function() {
+jQuery('#regfrm').submit(function(e) {
+	e.preventDefault();
+	if(jQuery("#pwd1").val() == jQuery("#pwd1").val()){
+	var str = jQuery( "#regfrm" ).serialize();
+	str+="&fun=reg"
+	var btn = jQuery(this)
+    btn.button('loading')
+    setTimeout(function () {
+        btn.button('reset')
+		//btn['data-target'] = "#myModal";
+		//jQuery('#regbtn[data-target] = #myModal')
+    }, 3000)
+var request = jQuery.ajax({
+  url: "https://www.tutorhelpdesk.com/includes/user_function.php",
+  method: "POST",
+  data: str,
+  dataType: "html"
+	});
+	request.done(function( msg ) {
+	if(msg=='success')
+	{
+		jQuery("#myModal").modal('show');
+	}
+	else if(msg=='error1'){
+		jQuery("#myModal2").modal('show');
+	}
+	else if(msg=='error2'){
+		jQuery("#myModal3").modal('show');
+	}
+	else{
+		jQuery("#myModal1").modal('show');
+	}
+	});
+	request.fail(function( jqXHR, textStatus ) {
+	  //alert( "Request failed: " + textStatus );
+	});
+	}else{
+		alert("Passwords fields are not same.");
+	}
+});
+jQuery('#loginbtn').click(function() {
+var str = jQuery( "#regfrm" ).serialize();
+str+="&fun=reg"
+  var btn = jQuery(this)
+    btn.button('loading')
+    setTimeout(function () {
+        btn.button('reset')
+		//btn['data-target'] = "#myModal";
+		//jQuery('#regbtn[data-target] = #myModal')
+    }, 3000)
+var request = jQuery.ajax({
+  url: "https://www.tutorhelpdesk.com/includes/user_function.php",
+  method: "POST",
+  data: str,
+  dataType: "html"
+});
+request.done(function( msg ) {
+if(msg=='success')
+{
+    jQuery("#myModal").modal('show');
+}
+else{
+    jQuery("#myModal1").modal('show');
+}
+  //$( "#log" ).html( msg );
+});
+request.fail(function( jqXHR, textStatus ) {
+  //alert( "Request failed: " + textStatus );
+});
+});
+/*jQuery('#updateprofile').click(function() {
+var str = jQuery( "#updateprofileform" ).serialize();
+jQuery("#loadingdiv").show("fast");
+str+="&fun=updateprofile";
+  var btn = jQuery(this)
+    btn.button('loading')
+    setTimeout(function () {
+        btn.button('reset')
+		//btn['data-target'] = "#myModal";
+		//jQuery('#regbtn[data-target] = #myModal')
+    }, 3000)
+var request = jQuery.ajax({
+  url: "includes/user_function.php",
+  method: "POST",
+  data: str,
+  dataType: "html"
+});
+request.done(function( msg ) {
+if(msg=='success')
+{
+jQuery("#loadingdiv").hide();
+	jQuery("#myModalLabel").html("Profile Update");
+	jQuery(".modal-body").html("Your profile has been updated");
+	jQuery("#myModal").modal('show');
+}
+  //$( "#log" ).html( msg );
+});
+request.fail(function( jqXHR, textStatus ) {
+  //alert( "Request failed: " + textStatus );
+});
+});
+*/
+});
+</script>
+<script>
+function resetpassword(){
+    var emailid=document.forgetform.emailid.value;
+    if (window.XMLHttpRequest){
+        xmlhttp=new XMLHttpRequest();
+    }
+    else{
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function(){
+        if (xmlhttp.readyState==4 && xmlhttp.status==200){
+            document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("https://www.tutorhelpdesk.com/blog/GET","https://www.tutorhelpdesk.com/includes/user_function.php?fun=forget&amp;q="+emailid,true);
+    xmlhttp.send();
+}
+function validateme(){
+    var emailid=document.loginfrm.loginemail.value;
+    var password=document.loginfrm.loginpass.value;
+    if (window.XMLHttpRequest){
+        xmlhttp=new XMLHttpRequest();
+    }
+    else{
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function(){
+        if (xmlhttp.readyState==4 && xmlhttp.status==200){
+            if(xmlhttp.responseText=="error"){
+                document.getElementById("txtHint12").innerHTML="Incorrect E-mail or Password";
+            }
+            else{
+                document.getElementById("loginfrm").submit();
+            }
+        }
+    }
+    xmlhttp.open("https://www.tutorhelpdesk.com/blog/GET","https://www.tutorhelpdesk.com/includes/user_function.php?fun=loginfrm&amp;email="+emailid+"&password="+password,true);
+    xmlhttp.send();
+}
+
+</script>
+  <header id="header">
+				<div class="header-top">
+					<div class="container">
+						<nav class="nav-top">
+							<ul class="nav nav-pills nav-top">
+								<li style="background-color:#000000;border-radius:4px;">	
+<span><a style="text-decoration:none" href="javascript:void(window.open('https://tawk.to/chat/5fa16909e019ee7748f05dfb/default','','width=590,height=760,left=0,top=0,resizable=yes,menubar=no,location=no,status=yes,scrollbars=yes'))" class="lz_cbl"><i class="icon icon-comments"> </i>LIVE CHAT</a></span>
+							</li>
+							<li>
+								<span><i class="icon icon-envelope"></i>hw@tutorhelpdesk.com</span>
+							</li>
+                           
+							<li class="phone">
+								<span><i class="icon icon-phone"></i>+1-617-807-0926</span>
+							</li>
+							</ul>
+						</nav>
+                        <div class="search">
+						<form id="searchForm" action="https://www.tutorhelpdesk.com/search-results.php" method="get">
+							<div class="input-group">
+								<input type="text" class="form-control search" name="q" id="q" placeholder="Search...">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="submit"><i class="icon icon-search"></i></button>
+								</span>
+							</div>
+						</form>
+					</div>
+                       
+					</div>
+				</div>
+				<div class="container">
+					<h1 class="logo">
+						<a href="https://www.tutorhelpdesk.com/">
+							<img alt="Tutorhelpdesk.com" width="166" height="46" data-sticky-width="144" data-sticky-height="40" src="https://www.tutorhelpdesk.com/img/logo.png">
+						</a>
+					</h1>
+					
+                    
+					<nav>
+						
+					</nav>
+					<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+						<i class="icon icon-bars"></i>
+					</button>
+				</div>
+				<div class="navbar-collapse nav-main-collapse collapse">
+					<div class="container">
+						
+						<nav class="nav-main mega-menu">
+							<ul class="nav nav-pills nav-main" id="mainMenu">
+								<li>
+									<a class="dropdown-toggle" href="https://www.tutorhelpdesk.com/">
+                                    <i class="icon icon-home"></i> Home 
+										
+									</a>
+									
+								</li>								
+								<li class="dropdown">
+									<a class="dropdown-toggle">
+										About
+										<i class="icon icon-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+                                    <li><a href="https://www.tutorhelpdesk.com/pages/About-us.html">About Us</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/pages/Services.html">How it Works?</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/pages/Pricing.html">Pricing</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/pages/faq.html">FAQs</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/blog/">Blog</a></li>
+									</ul>
+								</li>
+								<li class="dropdown active">
+									<a class="dropdown-toggle">
+											Assignment Help
+										<i class="icon icon-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Physics-Assignment-Help.html">Physics Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Chemistry-Assignment-Help.html">Chemistry Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Math-Assignment-Help.html">Math Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Engineering-Assignment-Help.html">Engineering Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Biology-Assignment-Help.html">Biology Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Economics-Assignment-Help.html">Economics Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Statistics-Assignment-Help.html">Statistics Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Accounting-Assignment-Help.html">Accounting Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Finance-Assignment-Help.html">Finance Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Management-Assignment-Help.html">Management Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Computer-Science-Assignment-Help.html">Computer Science Assignment Help</a></li>
+                                        
+                                      
+                                        
+									</ul>
+                               
+
+								<li>
+									<a href="https://www.tutorhelpdesk.com/contact.php">Contact Us</a>
+
+								</li>
+<li class="dropdown mega-menu-item mega-menu-signin signin" id="headerAccount"> <a class="dropdown-toggle" href="https://www.tutorhelpdesk.com/sign-in.php"> <i class="icon icon-user"></i> Sign In <i class="icon icon-angle-down "></i> </a>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="mega-menu-content">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="signin-form"> <span class="mega-menu-sub-title">Sign In</span>
+                        <div style="color: red;" id="txtHint12"></div>
+                        <form action="#" id="loginfrm" name="loginfrm" method="post">
+                          <div class="row">
+                            <div class="form-group">
+                              <div class="col-md-12">
+                                <label>E-mail Address</label>
+                                <input type="text" value="" class="form-control input-lg" name="loginemail" id="loginemail">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-group">
+                              <div class="col-md-12"> <a class="pull-right" id="headerRecover" href="#">(Lost Password?)</a>
+                                <label>Password</label>
+                                <input type="password" value="" class="form-control input-lg" name="loginpass" id="loginpass">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6"> <span class="remember-box checkbox">
+                              <label for="rememberme">
+                              <input type="checkbox" id="rememberme" name="rememberme">
+                              Remember Me </label>
+                              </span> </div>
+                            <div class="col-md-6">
+                              <input type="button" onclick="validateme()" value="Login" class="btn btn-primary pull-right push-bottom" data-loading-text="Loading..." >
+                            </div>
+                          </div>
+                        </form>
+                        <p class="sign-up-info">Don't have an account yet? <a href="#" id="headerSignUp"><span class="btn btn-success btn-xs">Sign Up</span></a></p>
+                      </div>
+                      <div class="signup-form"> <span class="mega-menu-sub-title">Create Account</span>
+                     <form action="#" id="regfrm" method="post">
+                          <div class="row">
+                            <div class="form-group">
+                              <div class="col-md-12">
+                              <label>E-mail Address</label>
+                                <input type="email" value="" class="form-control input-lg" name="email" required="required">                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-group">
+                              <div class="col-md-6">
+                                <label>Password</label>
+                                <input type="password" value="" class="form-control input-lg" name="password" id="pwd1" required="required">
+                              </div>
+                              <div class="col-md-6">
+                                <label>Re-enter Password</label>
+                                <input type="password" value="" class="form-control input-lg" name="cpassword" id="pwd2" required="required">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-group">
+                              <div class="col-md-6">
+		                           <label for="exampleInputEmail1">Phone : </label>
+			                           <input type="number" value="" maxlength="100" class="form-control input-lg" name="phone" id="phone" required="required">
+		                           </div>
+                             
+                             <div class="col-md-6">
+		                            <label for="exampleInputEmail1">Country</label>
+			                             <select required maxlength="100" class="form-control input-lg" name="country" id="country">
+                                         
+                                 </select>
+                            </div>
+                           <script>
+                             jQuery(document).ready(function (e) {
+                              populateCountries("country");
+                             });
+                           </script>
+		                      </div>
+
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <input type="submit" value="Create Account" class="btn btn-primary pull-right push-bottom" data-loading-text="Loading..." id="regbtn" data-toggle="modal" data-target="">
+                            </div>
+                          </div>
+                        </form>
+                        <p class="log-in-info">Already have an account? <a href="#" id="headerSignIn">Log In</a></p>
+                      </div>
+                      <div class="recover-form"> <span class="mega-menu-sub-title">Reset My Password</span>
+                        <p>Complete the form below to receive an email with the authorization code needed to reset your password.</p>
+                        <div id="txtHint" style="color: red;"></div>
+                        <form action="#" id="forgetform" name="forgetform">
+                          <div class="row">
+                            <div class="form-group">
+                              <div class="col-md-12">
+                                <label>E-mail Address</label>
+                                <input type="text" name="emailid" value="" class="form-control input-lg">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <input type="button" value="Submit" class="btn btn-primary pull-right push-bottom" data-loading-text="Loading..." onclick="resetpassword()" />
+                            </div>
+                          </div>
+                        </form>
+                        <p class="log-in-info">Already have an account? <a href="#" id="headerRecoverCancel">Log In</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Registration Successful</h4>
+      </div>
+      <div class="modal-body"> Your Registration is Successful. Please login and proceed with profile update. </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="modbtn">Got it!!</button>
+        <!--<button type="button" class="btn btn-default">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Registration Failed</h4>
+      </div>
+      <div class="modal-body"> Please enter valid password and try again. </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="modbtn">Got it!!</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Registration Failed</h4>
+      </div>
+      <div class="modal-body"> Password and Retype Password are not matching. Please try again. </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="modbtn">Got it!!</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Registration Failed</h4>
+      </div>
+      <div class="modal-body"> The email has already been used, in case you have forgotten the password <a href="https://www.tutorhelpdesk.com/lost-password.php"><span class="btn btn-success btn-xs">click here</span></a> </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="modbtn">Got it!!</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Registration Failed</h4>
+      </div>
+      <div class="modal-body"> Your login details has been emailed to your registered email id. </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="modbtn">Got it!!</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Registration Failed</h4>
+      </div>
+      <div class="modal-body"> Your have entered an invalid email id or your email ID is not registered with us. </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="modbtn">Got it!!</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+ 
+<div role="main" class="main">
+
+				<section class="page-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="breadcrumb">
+									<li><a style="color:#F8F7F7;" href="https://www.tutorhelpdesk.com/"><span class="label label-dark">Home</span></a></li>
+									<li class="active">blog posts</li>
+								</ul>
+							</div>
+						</div>
+                     
+						<div class="row">
+							<div class="col-md-9">
+								<h2><strong>Tutorhelpdesk Blog</strong></h2>
+							</div>
+                            
+                            <div class="col-md-3">
+								<div class="get-started">
+									<a href="https://www.tutorhelpdesk.com/submitassignment.php" class="btn btn-lg btn-default"><i class="icon icon-cloud-upload"></i> Submit Assignment Now!</a>
+									
+								</div>
+							</div>
+                            
+                            
+						</div>
+					</div>
+				</section>
+                
+                
+  <div class="container">
+    <div class="row">
+    <div class="col-md-3">
+<aside class="sidebar">
+                            <div class="panel-group secundary" id="accordion2">
+                            <div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse1One">
+												Assignment Help
+											</a>
+										</h4>
+									</div>
+									<div id="collapse1One" class="accordion-body collapse in">
+										<div class="panel-body">
+											 <ul class="nav nav-list primary">
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Physics-Assignment-Help.html">Physics Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Chemistry-Assignment-Help.html">Chemistry Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Math-Assignment-Help.html">Math Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Engineering-Assignment-Help.html">Engineering Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Biology-Assignment-Help.html">Biology Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Economics-Assignment-Help.html">Economics Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Statistics-Assignment-Help.html">Statistics Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Accounting-Assignment-Help.html">Accounting Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Finance-Assignment-Help.html">Finance Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Management-Assignment-Help.html">Management Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Computer-Science-Assignment-Help.html">Computer Science Assignment Help</a></li>
+                                                                             
+                                        
+									</ul>
+    
+										</div>
+									</div>
+								</div>
+                                
+
+								
+
+							
+
+								                            
+
+
+							</aside></div>
+
+
+
+        <div class="col-md-9">
+          
+          <div class="row">
+              
+              
+<style>
+    .pagination1 {
+        margin:0; 
+        padding:0;
+        float:left;
+    }
+    .pagination1 ul {
+        width:600px;
+        float: right;
+        list-style: none;
+        margin:0 0 0 ;
+        padding:0;
+    }
+    .pagination1 li span { line-height:45px; font-weight:bold;}
+    .pagination1 li {
+        margin:0 0 0 0;
+        float:left;
+        font-size:16px;
+        text-transform:uppercase;
+    }
+    .pagination1 li a {
+        color:#7f8588;
+        padding:10px 0 0 0; width:33px; height:33px;
+        text-decoration:none; text-align:center;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        display:block;
+    }
+    .pagination1 li:last-child a:hover { background:none; color:#7f8588;}
+    .pagination1 li:first-child a:hover { background:none;color:#7f8588;}
+    .pagination1 li a:hover {
+        color:#fff;
+        text-decoration: none;
+        display: block;
+        padding:10px 0 0 0; width:33px; height:33px;
+    }
+    .pagination1 li.activepage a { 
+        color:#fff;
+        text-decoration: none;
+        padding: 10px 0 0 0; }
+    </style>
+
+    <div id="content_paginate">
+        <div class="mainblog">
+            <div class="col-md-12">
+
+                <p><h4><strong><a href="https://www.tutorhelpdesk.com/blog/australian-chemistry-assignment-homework-help">Australian Chemistry Assignment Homework Help</a></strong></h4></p>
+                <p><span class="label label-info">Posted By <b>Damon</b> 29-Oct-2019 15:09:00</span></p>
+                <p><p style="text-align: justify;">The study of physical science, Chemistry involves in-depth learning about different elements in the world and their formations. The study of an array of chemicals also falls under this category. </p>
+<p style="text-align: justify;">At Tutorhelpdesk.com we facilitate the education of Chemistry to our students training them about the various formations of life that may include study of formation of atmosphere ozone layer, plant life and more.</p>
+<p style="text-align: justify;">We impart our knowledge of Science to students in a way that they are engaged in a patient, friendly and comfortable learning environment. Each of our experts, who are responsible for the training of students ensure their devotion in teaching and helping students to understand the subjects carefully.</p>
+<p style="text-align: justify;">Our <a href="https://www.tutorhelpdesk.com/homeworkhelp/Chemistry-Assignment-Help.html"><strong>Australian Chemistry Assignment Homework Help</strong></a> train students thoroughly, preparing them to face the heights of career and accomplish them all in no time. They avail themselves to guide students 24*7 and foster their development of intellect in this specific field.</p>
+<p style="text-align: justify;"><strong>What is Chemistry?</strong><br />
+The origin of chemistry dates back to several unknown years when mankind was unaware of the concept of technology. Chemistry which is also known as central science deals thoroughly with the art of chemical properties resolving into their principles.</p>
+<p style="text-align: justify;">Did you know that our body is made of several chemicals that stimulate our breathing, eating walking, sleeping and working? All this is closely knit with the study of chemistry that fosters the functions of our body via chemicals in it. Thus, chemistry is a significant subject in Science that requires in-depth understanding and learning.</p>
+<p style="text-align: justify;">In fact, it is the study of chemistry that enables people to preserve food in the right temperature, find out whether the food is rotten, and helps professionals in deciding the ingredients required to create a potential dish washing spray, soaps, medicines, drugs and more.</p>
+<p style="text-align: justify;"><strong>Chemistry Homework Help</strong><br />
+Our teachers provide <strong>Chemistry Homework Solver Free Online</strong> to students to enable them to complete their homework properly. Our trainers have vivid idea about different learners that guide them towards providing personalised help to each one so as to assist them in receiving quality training. They also specialise in great communication skills that keep our students engaged in their training alongside keeping their interest in the subject intact.</p>
+<p style="text-align: justify;">Our professional teachers provide online chemistry training to students and help them to become <strong>Chemistry Writing Expert in Aussies</strong>. Each student is exposed to exceptional training, with key importance to their assignment completion skills. </p>
+<p style="text-align: justify;">We ensure teaching our students in pocket friendly rates, establishing a collaborative environment for them and also mobilizing them to perform better every time. Rather than focusing on competing with other students we teach our trainees to compete with themselves and establish their skills timely.</p>
+<p style="text-align: justify;"><strong>Why us?</strong><br />
+We at Tutorhelpdesk.com are not just talk. Our faculty is specialised in Chemistry with several years of teaching experience. Our intellectual training, assignment project help and writing services provide students with holistic development that help them to outshine others.</p>
+<p style="text-align: justify;">In case you or your child is looking to receive exemplary chemistry training, we here avail ourselves to you with promising results.</p></p><hr class="tall"></hr>
+            </div>
+
+        </div>
+                <div class="mainblog">
+            <div class="col-md-12">
+
+                <p><h4><strong><a href="https://www.tutorhelpdesk.com/blog/statistics-assignment-writing-expert-in-uk">Statistics Assignment Writing Expert In UK</a></strong></h4></p>
+                <p><span class="label label-info">Posted By <b>Damon</b> 28-Aug-2019 13:21:00</span></p>
+                <p><p style="text-align: justify;">In the informative age, statistics play a crucial role in estimating the equations of the world around us. This powerful subject that deals very closely with Mathematics, involves thorough understanding, concentration and interpretation of information. </p>
+<p style="text-align: justify;"><br />
+At <strong>Tutorhelpdesk.com</strong>, our team of professionals provide an exemplary system of Statistics training to students in order to mobilize their skills and galvanize their intellect about the world around them. We merge to help our students understand the subject vividly, apply the theories and achieve unrivalled height in their career.</p>
+<p style="text-align: justify;">We stimulate the growth of <a href="https://www.tutorhelpdesk.com/homeworkhelp/Statistics-Assignment-Help.html"><strong>Statistics assignment writing expert in UK</strong></a> so as to empower the subject of Statistics and foster our students to engage in the subject. Students can train themselves with us at <strong>Tutorhelpdesk.com</strong> where our excellent faculty awaits their presence to give them the knowledge that will help them reach the stars.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>What is Statistics?</strong><br />
+Statistics deals with the information of the world around us via mathematical equations and researched data. Basically, it is a &lsquo;Game of Mathematics&rsquo; wherein students take interest in learning about the world they live in.</p>
+<p style="text-align: justify;">This subject that is significant for a pool of reasons, enables the world to study weather forecast, consumer goods, analyze health conditions and organize political campaigns. Statistics is a play of measurements that help us analyze, interpret, research and calculate, any subject, matter, body or theory that falls under the experiment.</p>
+<p style="text-align: justify;">In fact, statistics has a vital role to play even in our daily life as we involve in stock market, insurance, diseases and more. The study of Statistics is essential for each student who desires to excel in the field of Mathematics.</p>
+<p style="text-align: justify;"><strong>Do My Statistics Assignment Project Help</strong><br />
+Our team of expert faculty avail themselves to students who are looking to complete their statistics assignment project or demand for urgent help in the same. Our professional trainers will guide them into accomplishing their project goals within the prescribed time frame and inculcate qualitative work in their study.<strong> </strong></p>
+<p style="text-align: justify;">We provide personalized help 24*7 to our students, resolve their queries and support them in their incessant effort of scoring good grades in the examination.</p>
+<p style="text-align: justify;">Our tutors are specialized in Statistics with a PhD and Masters Degree. Thus, they promise to guide students with their furbished skills and help students attain remarkable knowledge in the subject.</p>
+<p style="text-align: justify;"><strong>Statistics Homework Help</strong><br />
+We provide students a thorough training in Statistics, alongside regular home works, assignments and tests to guide them into consuming the subject properly.<br />
+Our cost-effective services, enable parents and students to believe in us and rely on our training to polish students carefully.</p>
+<p style="text-align: justify;">Students are exposed to best assistance by our faculty and are taught under a well-maintained system of coaching.</p>
+<p style="text-align: justify;">In case of any queries, students can contact us immediately on the prescribed number or email us for more. They can also fill up the assignment request help to receive utmost assistance from our end. With us, they will surely have a bright future ahead!</p></p><hr class="tall"></hr>
+            </div>
+
+        </div>
+                <div class="mainblog">
+            <div class="col-md-12">
+
+                <p><h4><strong><a href="https://www.tutorhelpdesk.com/blog/economics-assignment-help-experts-in-usa">Economics Assignment Help Experts in USA</a></strong></h4></p>
+                <p><span class="label label-info">Posted By <b>Damon</b> 25-Jul-2019 12:50:00</span></p>
+                <p><p style="text-align: justify;">Economics requires a profound knowledge of goods and services. We at Tutorhelpdesk.com realise the significance of economics and therefore avail a team of expert faculty who can train students about this subject in the right manner. These tutors who provide <strong>USA Economics expert help</strong> to students dive into the details of each query of these trainees and help them to achieve new heights. </p>
+<p style="text-align: justify;">We at Tutorhelpdesk.com ensure the stringent guidance of our young students with a knack for Economics. We foster their efforts by driving them to get to the depth of the subject and understand everything properly. Our team provides 24*7 student care support so as to provide utmost comfort to our students in need.</p>
+<p style="text-align: justify;"><strong>What is Economics?</strong></p>
+<p style="text-align: justify;">Many famous scientists and economists have contributed to the internet by providing their own definition of economics. One of the easiest and most loved subjects, Economics has gained massive importance over the years. A lot of students find it easy to study Economics as its detailed summary enables them to understand the concept of business better and improvise their intellect on trading.</p>
+<p style="text-align: justify;">Economics is an interesting synopsis of the variety of behaviour and functions of economies in the country. It also studies the behaviour and interactions of economic agents, sellers, traders, and all other business persons.</p>
+<p style="text-align: justify;">The basic theory of giving and taking, economics deals descriptively with social science. Flooded with a range of distinctions, the study of economics adheres to a massive acre. Basically, this subject deals with a pool of businesses, profit and loss.</p>
+<p style="text-align: justify;"><strong>Economics Assignment Help</strong></p>
+<p style="text-align: justify;">Economics is by far one of the most fascinating subjects taught in high school. With a little furbishing, students can excel in the subject by scoring incredible grades in their higher examinations that play a crucial role in defining their future. In fact, our team of expert faculty provide <a href="https://www.tutorhelpdesk.com/homeworkhelp/Economics-Assignment-Help.html"><strong>Economics Assignment Help in USA</strong></a> to engage students in learning about the subject most conveniently.</p>
+<p style="text-align: justify;">At our centre, we also guide students in Microeconomics Assignment Online Help so as to help them understand the basics of economics in depth. Regular tests, homework and assignments are assigned to each student so as to inculcate the subject in them intricately. We also provide students a Managerial Economics Assignment Writing Service, to improvise their Economics skills.</p>
+<p style="text-align: justify;">Our online services will enable you to receive immensely improved results at the end of each term of examination. We do not focus on training students for the mere reason of earning money. In fact, we believe in training our students to achieve new heights.</p>
+<p style="text-align: justify;">Students who&rsquo;ve been hunting for an <strong>exceptional Economics tutor</strong> can contact us to join our Tuition classes at cost-effective prices. We avail ourselves to all students who are interested in scoring good grades, learning Economics in detail and refine their intellect with remarkable training.</p>
+<p style="text-align: justify;">Sometimes resolving queries at school might seem like a daunting task but with us, its quite the contrary. We are open to students and train them in a friendly environment, resolve all their queries in line and help them constructively.</p></p><hr class="tall"></hr>
+            </div>
+
+        </div>
+                <div class="mainblog">
+            <div class="col-md-12">
+
+                <p><h4><strong><a href="https://www.tutorhelpdesk.com/blog/econometric-help-assignment-for-both-beginners-and-the-advanced-students">Econometric Help Assignment For Both Beginners And The Advanced Students</a></strong></h4></p>
+                <p><span class="label label-info">Posted By <b>Clark</b> 15-Apr-2019 11:00:00</span></p>
+                <p><p style="text-align: justify;">Econometrics is defined as a branch of economics, which entails the application of mathematics, computer science and statistical methods to compute economic data. From this definition, it is imperative to note that one needs the knowledge from three disciplines to be able to handle econometric projects or assignments. It can also be noted by far that logical and divergent thinking accompanied by proper computing skills in order to complete these assignments is a complex process that requires the experienced authors. Econometrics employs a scientific approach largely in all its applications. In fact, several scholars argue whether it is a general science or not. They cite the much borrowed scientific aspects as approve that distinguish it from art. The economic theories and hypothesis in relation to economics prove the science elements as well. Nevertheless, economics is an art that involves quantitative analysis and measure of fiscal parameters such as the flow of income for the general population of a country. <strong>Econometric assignment help </strong>for advanced level requires thorough research and analysis. Consequently, this complexity in data analysis drawing from several disciplines makes it difficult for the students to handle econometric assignments independently without the expert help.</p>
+<p style="text-align: justify;">At Tutorhelpdesk.com, we have every resource we need to start working on your econometric assignment. Our fundamental assets are our tutor experts who are resilient and ready to work on your assignment. We only source our tutors from reputable higher learning institutions all over the world with specific specialization in economics and other related fields. Their vast knowledge and skills enable them to deal with any level of tasks regardless of their complexity. <strong>At tutorhelpdesk.com</strong>, we work 24/7 to provide quality <strong><a href="https://www.tutorhelpdesk.com/homeworkhelp/Economics-/Econometrics-Assignment-Help.html">econometric assignment help</a> </strong>that will guarantee students super grades. In addition, we are aware of plagiarism which is a beast that sabotages both the writers and the academic work, and so we are very cautious not to put any of our writer&rsquo;s work to the public without checking their work on our plagiarism checker. Our system is very clear; to enable students to take the shortest time possible to upload the assignments they need to be done without the technical hitches.</p>
+<p style="text-align: justify;">Furthermore, our <strong>econometric help</strong> tutors are always available any time of the day and if you need any help from us, you are always welcomed to talk to us via our website <strong>tutorhelpdesk.com</strong>. One obvious advantage we have over our competitors is that you can always chat with our support team who are friendly and answers all your questions within a very short period of time. In addition, you can also chat with your selected tutor to work on your assignment directly. The prices are very friendly and we promise value out of it. Our tutors will deliver your paper in time to allow further free revisions if any before due time for submission to the lecturer. Our tutors will truly give you the best since they have been in the field for many years. The experience and knowledge they have gained in this field are enough to make your assignment a masterpiece. In fact, they are highly rated from their previous projects with students they have helped achieve excellent grades. For sure, your <strong>econometric help </strong>is just a mile from a single click. Visit our website and we assure you! There is a lot in store for you waiting.</p></p><hr class="tall"></hr>
+            </div>
+
+        </div>
+                <div class="mainblog">
+            <div class="col-md-12">
+
+                <p><h4><strong><a href="https://www.tutorhelpdesk.com/blog/avail-online-nursing-assignment-help-and-understand-the-fundamentals-of-the-subject">Avail Online Nursing Assignment Help And Understand The Fundamentals Of The Subject</a></strong></h4></p>
+                <p><span class="label label-info">Posted By <b>Clark</b> 29-Jan-2019 15:15:00</span></p>
+                <p><p style="text-align: justify;">A basic meaning of Nursing is Care towards the general people or towards the society utilizing proper determination and treatment facilities. It can be disease anticipation, wellbeing enhancement or lightening of the sufferings. The nursing focuses more on people, families, and groups so they may achieve, keep up, or recoup optimal health and spend a quality time in their life.</p>
+<p style="text-align: justify;">Nursing is a vast area and it is wide and profound. There are varied fortes related with Nursing. You can seek after courses related to Cardiac Care Nursing, Perioperative Nurse and Orthopedic Nursing, and so on. Our online nursing assignment<strong> </strong>help centre is available in order to help you with different aspects of this field.</p>
+<p style="text-align: justify;"><strong>Here, We Have Provided Some Examples On Which Our Experts Work On:</strong></p>
+<ul>
+    <li style="text-align: justify;">Patient safety</li>
+    <li style="text-align: justify;">Mental health</li>
+    <li style="text-align: justify;">Behavioural Health nursing</li>
+    <li style="text-align: justify;">Law and Professional Issues in Nursing</li>
+    <li style="text-align: justify;">Elder Care Management</li>
+    <li style="text-align: justify;">Legal concepts in new born and maternal nursing</li>
+    <li style="text-align: justify;">Physiology</li>
+    <li style="text-align: justify;">Neonatal Care</li>
+    <li style="text-align: justify;">Nursing ethics</li>
+    <li style="text-align: justify;">Medicine and its management in child and adult nursing</li>
+    <li style="text-align: justify;">Health care and society</li>
+    <li style="text-align: justify;">Evidence-based Practice in Nursing</li>
+    <li style="text-align: justify;">Aboriginal health and safety</li>
+    <li style="text-align: justify;">Healthcare policy</li>
+    <li style="text-align: justify;">Healthcare agency policies</li>
+    <li style="text-align: justify;">Therapeutic nursing</li>
+    <li style="text-align: justify;">Pharmacology</li>
+    <li style="text-align: justify;">Human Nutrition</li>
+    <li style="text-align: justify;">Pathophysiology</li>
+    <li style="text-align: justify;">Medical &amp; Health Services Management</li>
+    <li style="text-align: justify;">Public Health Administration</li>
+    <li style="text-align: justify;">Nursing handover process</li>
+    <li style="text-align: justify;">Clinical Judgment and Decision Making in Nursing</li>
+</ul>
+<p style="text-align: justify;">Also, we provide assistance on these mentioned areas of nursing -</p>
+<ul>
+    <li style="text-align: justify;">Postoperative nursing</li>
+    <li style="text-align: justify;">Women&rsquo;s health</li>
+    <li style="text-align: justify;">Cardiac nursing</li>
+    <li style="text-align: justify;">Gerontology</li>
+    <li style="text-align: justify;">Preoperative nursing</li>
+    <li style="text-align: justify;">Paediatrics</li>
+    <li style="text-align: justify;">Mental Health</li>
+</ul>
+<p style="text-align: justify;">Tutorhelpdesk has group of nursing experts who have achieved good degree on nursing. They also took part in various social treatment rallies and shared their experience with the industry as well. Our scholars have been helping the students with their nursing homework for the past few years. Moreover, we have received good response from the worldwide students. We cover a vast area of nursing as mentioned above. Here, you can get an affordable help with nursing assignment.</p>
+<p style="text-align: justify;">If you are a nursing student and can&rsquo;t find your topic listed in the above area, then contact us. As nursing is a vast area, we can&rsquo;t mention every topic our experts cover in this field.&nbsp; We deal with your project immediately you assign them to us. The students, who are worried thinking about how to<strong> </strong><a data-cke-saved-href="http://www.tutorhelpdesk.com/homeworkhelp/Nursing-Assignment-Help.html" href="https://www.tutorhelpdesk.com/homeworkhelp/Nursing-Assignment-Help.html">do my nursing assignment</a>, can stay stress-free.<strong> </strong>The projects are submitted on the website link and directed to the experts as well. After receiving the topic, we do a research on it and start working on the subject area. Our experts believe in four primary things while completing each project and they are - availability, affordability, professionalism and plagiarism free content.</p>
+<p style="text-align: justify;">The team of experts at Tutorhelpdesk try to help you with each scholastic check. However, pick our nursing assignment help and complete your project by proficient nursing specialists. Interested students can submit their project today and get it done instantly by world-class mentors. We are open for you 24*7.</p></p><hr class="tall"></hr>
+            </div>
+
+        </div>
+        </div>
+<!--                <input type='hidden' id='current_page' />  
+  <input type='hidden' id='show_per_page' /> 
+  <div id='page_navigation'></div>-->
+
+<div class='pagination1'> <ul><li><a href="https://www.tutorhelpdesk.com/blog/?page=2">prev</a></li><li><a href="https://www.tutorhelpdesk.com/blog/?page=1">1</a></li><li><a href="https://www.tutorhelpdesk.com/blog/?page=2">2</a></li><li><a href='#' class='active'>3</a></li><li><a href="https://www.tutorhelpdesk.com/blog/?page=4">4</a></li><li><a href="https://www.tutorhelpdesk.com/blog/?page=5">5</a></li><li><a href="https://www.tutorhelpdesk.com/blog/?page=6">6</a></li><li><a href="https://www.tutorhelpdesk.com/blog/?page=7">7</a></li><li><a href="https://www.tutorhelpdesk.com/blog/?page=8">8</a></li><li><a href="https://www.tutorhelpdesk.com/blog/?page=9">9</a></li><li>...</li><li><a href="https://www.tutorhelpdesk.com/blog/?page=18">18</a></li><li><a href="https://www.tutorhelpdesk.com/blog/?page=19">19</a></li><li><a href="https://www.tutorhelpdesk.com/blog/?page=4">next</a></li></ul></div>
+
+
+          </div>
+         </div>
+      </div>
+    </div>
+  </div>
+		<footer id="footer">
+				<div class="container">
+                <div class="row">
+                <div class="footer-ribbon">
+						<span>Email: <strong>hw@tutorhelpdesk.com</strong></span>
+						</div>
+                <div class="col-md-3">
+									<h4>Homework Help</h4>
+									<ul class="list list-icons list-icons-sm">
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Physics-Assignment-Help.html">Physics Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Chemistry-Assignment-Help.html">Chemistry Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Math-Assignment-Help.html">Math Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Engineering-Assignment-Help.html">Engineering Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Biology-Assignment-Help.html">Biology Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Computer-Science-Assignment-Help.html">Computer Science Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Law-Assignment-Help.html">Law Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Sociology-Assignment-Help.html">Sociology Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Social-Science-Assignment-Help.html">Social Science Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/English-Assignment-Help.html">English Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Geography-Assignment-Help.html">Geography Assignment Help</a></li>
+									</ul>
+								</div>
+                  <div class="col-md-3">
+									<h4>Assignment Help</h4>
+									<ul class="list list-icons list-icons-sm">
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Economics-Assignment-Help.html">Economics Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Statistics-Assignment-Help.html">Statistics Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Accounting-Assignment-Help.html">Accounting Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Finance-Assignment-Help.html">Finance Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Management-Assignment-Help.html">Management Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Operations-Management-Assignment-Help.html">Operations Management Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Operations-Research-Assignment-Help.html">Operations Research Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Data-Research-Assignment-Help.html">Data Research Assignment Help</a></li>
+                                      	<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Data-Analysis-Assignment-Help.html">Data Analysis Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/History-Assignment-Help.html">History Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Ecology-Assignment-Help.html">Ecology Assignment Help</a></li>
+									</ul>
+								</div>
+                    <div class="col-md-3">
+									<h4>Additional Topics</h4>
+									<ul class="list list-icons list-icons-sm">
+                                    <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Entrepreneurship-Assignment-Help.html">Entrepreneurship Assignment Help</a></li>
+                                    <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Essay-Writing-and-Letter-Writing-Assignment-Help.html">Essay Writing Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Biotechnology-Assignment-Help.html">Biotechnology Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Biochemistry-Assignment-Help.html">Biochemistry Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Fluid-Mechanics-Assignment-Help.html">Fluid Mechanics Assignment Help</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Electricity-Magnetism-Assignment-Help.html">Electricity Magnetism Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Biometry-Assignment-Help.html">Biometry Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Research-Methods-Assignment-Help.html">Research Methods Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Business-Analytics-Assignment-Help.html">Business analytics Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Nursing-Assignment-Help.html">Nursing Assignment Help</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/homeworkhelp/Geology-Assignment-Help.html">Geology Assignment Help</a></li>
+                                        
+									</ul>
+								</div>
+                    <div class="col-md-3">
+							<div class="newsletter">
+								<h4>Newsletter</h4>
+								<p>Enter your e-mail and subscribe to our newsletter for special discount offers on homework and assignment help.</p>
+			
+								<div class="alert alert-success hidden" id="newsletterSuccess">
+									<strong>Success!</strong> You've been added to our email list.
+								</div>
+			
+								<div class="alert alert-danger hidden" id="newsletterError"></div>
+			
+								<form id="newsletterForm" action="https://www.tutorhelpdesk.com/php/newsletter-subscribe.php" method="POST">
+									<div class="input-group">
+										<input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="submit">Go!</button>
+										</span>
+									</div>
+								</form>
+							</div>
+                            <br><br>
+                             <h4>Follow Us</h4>
+                             <p>Follow us on facebook, twitter and google-plus</p>
+							<div class="social-icons">
+								<ul class="social-icons">
+									<li class="facebook"><a href="https://www.facebook.com/Tutorhelpdeskonline/" target="_blank" data-placement="bottom" rel="tooltip" title="Facebook">Facebook</a></li>
+									<li class="twitter"><a href="https://twitter.com/tutorhelpdesk" target="_blank" data-placement="bottom" rel="tooltip" title="Twitter">Twitter</a></li>
+									<li class="googleplus"><a href="https://www.google.com/+Tutorhelpdesk-homework-assignment-help" target="_blank" data-placement="bottom" rel="tooltip" title="Google+">Google+</a></li>
+								</ul>
+							</div>
+						</div>
+                
+                </div>
+					
+				</div>
+               
+                
+				<div class="footer-copyright">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-1">
+								<a href="https://www.tutorhelpdesk.com/" class="logo">
+									<img alt="tutorhelpdesk.com" class="img-responsive" src="https://www.tutorhelpdesk.com/img/logo-footer.png">
+								</a>
+							</div>
+							<div class="col-md-6">
+								<p>Copyright &copy; 2010-2021 Tutorhelpdesk.com</p>
+							</div>
+							<div class="col-md-5">
+								<nav id="sub-menu">
+									<ul>
+										<li><a href="https://www.tutorhelpdesk.com/sitemap.php">Sitemap</a></li>
+										<li><a href="https://www.tutorhelpdesk.com/careers.php">Careers</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/pages/terms-and-conditions.html">T & C</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/pages/Privacy-Policy.html">Privacy Policy</a></li>
+                                        <li><a href="https://www.tutorhelpdesk.com/pages/Refund-Policy.html">Refund Policy</a></li>
+
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+
+<script src="https://www.tutorhelpdesk.com/vendor/jquery.appear.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/jquery.easing.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/jquery.cookie.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/jquery.validate.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/jquery.stellar.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/jquery.knob.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/jquery.gmap.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/twitterjs/twitter.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/isotope/jquery.isotope.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/owl-carousel/owl.carousel.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/jflickrfeed/jflickrfeed.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/magnific-popup/magnific-popup.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/mediaelement/mediaelement-and-player.js"></script>
+		
+		<!-- Theme Initializer -->
+		<script src="https://www.tutorhelpdesk.com/js/theme.plugins.js"></script>
+		<script src="https://www.tutorhelpdesk.com/js/theme.js"></script>
+		
+		<!-- Current Page JS -->
+		<script src="https://www.tutorhelpdesk.com/vendor/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/rs-plugin/js/jquery.themepunch.revolution.js"></script>
+		<script src="https://www.tutorhelpdesk.com/vendor/circle-flip-slideshow/js/jquery.flipshow.js"></script>
+		<script src="https://www.tutorhelpdesk.com/js/views/view.home.js"></script>
+		
+		<!-- Custom JS -->
+		<script src="https://www.tutorhelpdesk.com/js/custom.js"></script>
+        
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-17121911-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5fa16909e019ee7748f05dfb/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+	</body>
+
+<!-- Mirrored from www.tutorhelpdesk.com/blog/?page=3 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Nov 2021 07:57:36 GMT -->
+</html>
+<script>
+    //pagination script
+    $(document).ready(function(){  
+      
+        //how much items per page to show  
+        var show_per_page = 4;  
+        //getting the amount of elements inside content div  
+        var number_of_items = $('#content_paginate').children().size();  
+        //calculate the number of pages we are going to have  
+        var number_of_pages = Math.ceil(number_of_items/show_per_page);  
+      
+        //set the value of our hidden input fields  
+        $('#current_page').val(0);  
+        $('#show_per_page').val(show_per_page);  
+      
+        //now when we got all we need for the navigation let's make it '  
+      
+        /* 
+        what are we going to have in the navigation? 
+            - link to previous page 
+            - links to specific pages 
+            - link to next page 
+        */  
+        var navigation_html = '<a class="previous_link" href="javascript:previous();">Prev</a>';  
+        var current_link = 0;  
+        while(number_of_pages > current_link){  
+            navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +')" longdesc="' + current_link +'">'+ (current_link + 1) +'</a>';  
+            current_link++;  
+        }  
+        navigation_html += '<a class="next_link" href="javascript:next();">Next</a>';  
+      
+        $('#page_navigation').html(navigation_html);  
+      
+        //add active_page class to the first page link  
+        $('#page_navigation .page_link:first').addClass('active_page');  
+      
+        //hide all the elements inside content div  
+        $('#content_paginate').children().css('display', 'none');  
+      
+        //and show the first n (show_per_page) elements  
+        $('#content_paginate').children().slice(0, show_per_page).css('display', 'block');  
+        
+        
+                
+      
+    });  
+      
+    function previous(){  
+      
+        new_page = parseInt($('#current_page').val()) - 1;  
+        //if there is an item before the current active link run the function  
+        if($('.active_page').prev('.page_link').length==true){  
+            go_to_page(new_page);  
+        }  
+      
+    }  
+      
+    function next(){  
+        new_page = parseInt($('#current_page').val()) + 1;  
+        //if there is an item after the current active link run the function  
+        if($('.active_page').next('.page_link').length==true){  
+            go_to_page(new_page);  
+        }  
+      
+    }  
+    function go_to_page(page_num){  
+        //get the number of items shown per page  
+        var show_per_page = parseInt($('#show_per_page').val());  
+      
+        //get the element number where to start the slice from  
+        start_from = page_num * show_per_page;  
+      
+        //get the element number where to end the slice  
+        end_on = start_from + show_per_page;  
+      
+        //hide all children elements of content div, get specific items and show them  
+        $('#content_paginate').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');  
+      
+        /*get the page link that has longdesc attribute of the current page and add active_page class to it 
+        and remove that class from previously active page link*/  
+        $('.page_link[longdesc=' + page_num +']').addClass('active_page').siblings('.active_page').removeClass('active_page');  
+      
+        //update the current page input field  
+        $('#current_page').val(page_num); 
+        
+    } 
+    //end of pagination
+</script>
+<style>
+    div#page_navigation {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    clear: both;
+    float: right;
+    margin: 10px 0;
+    padding: 0;
+}
+#page_navigation a {
+    border-right: 1px solid #ddd;
+    color: #555;
+    float: left;
+    padding: 5px 10px;
+}
+#page_navigation a:first-child {
+    border-left: 0 none;
+    border-radius: 5px 0 0 5px;
+}
+#page_navigation a:last-child {
+    border-radius: 0 5px 5px 0;
+}
+#page_navigation .page_link.active_page, #page_navigation a:hover {
+  background: none repeat scroll 0 0 #2da5da;
+  color: #fff;
+  text-decoration: none;
+}
+.col-md-12.mainblog {
+  margin: 5px 0 20px;
+}
+</style>
